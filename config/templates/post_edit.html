@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="font-size: 24px;">Change the post</h1> <!-- Increase the font size of the title -->
+    <form action="" method="post">
+        <fieldset>
+        {% csrf_token %}
+        <label for="id_title" style="font-size: 18px;">Title:</label> <!-- Increase the font size of the label -->
+        <br>
+        <input type="text" name="title" id="id_title" style="font-size: 16px; width: 100%;"> <!-- Increase the font size of the input field and set the width to 100% -->
+        <br>
+        <br>
+        <label for="id_body" style="font-size: 18px;">Body:</label> <!-- Increase the font size of the label -->
+        <br>
+        <textarea name="body" id="id_body" rows="6" style="font-size: 16px; width: 100%;"></textarea> <!-- Increase the font size of the textarea and set the width to 100% -->
+        <br>
+        <br>
+        <button class="button button1" type="submit">Update</button>
+        </fieldset>
+    </form>
+{% endblock content %}
